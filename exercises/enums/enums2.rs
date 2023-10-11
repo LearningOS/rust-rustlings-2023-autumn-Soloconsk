@@ -7,6 +7,8 @@
 #[derive(Debug)]
 enum Message {
     Move{x: i32, y: i32},
+    Echo(String),
+    ChangeColor(i32, i32, i32),
     Quit
 }
 
@@ -14,8 +16,6 @@ impl Message {
     fn call(&self) {
         println!("{:?}", self);
     }
-    fn Echo(s: String){}
-    fn ChangeColor(x: i32, y:i32, z:i32){}
 }
 
 fn main() {
